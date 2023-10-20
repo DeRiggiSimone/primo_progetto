@@ -1,1 +1,16 @@
-<a href="/admin">Pannello admin</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    <li><a href="/admin">Pannello admin</a></li>
+    <li><a href="{% url 'prima_app:index'%}">index prima app</a></li>
+    <li><a href="{% url 'seconda_app:es_if'%}">index seconda app</a></li>
+    </ul>
+    
+</body>
+</html>
