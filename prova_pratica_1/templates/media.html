@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <style>
+        #myDIV {
+          color: red;
+        }
+        #myDIV2 {
+          color: green;
+        }
+        #myDIV2 {
+          color: black;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    lista={{lista}};
+    {% for i in lista %}
+        cont+=lista[i]
+    m=cont/30
+    {% if m<6 %}
+        <div id="myDIV">
+            promt(cont)
+        </div>
+    {% elif m>6 %}
+        <div id="myDIV2">
+            promt(cont)
+        </div>
+    {% else %}
+        <div id="myDIV3">
+            promt(cont)
+        </div>
+    
+
+
+</body>
+</html>

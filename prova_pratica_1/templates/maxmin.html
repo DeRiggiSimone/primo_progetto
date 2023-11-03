@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <style>
+        #myDIV {
+          color: red;
+        }
+        #myDIV2 {
+          color: green;
+        }
+        #myDIV2 {
+          color: black;
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <b>var1= {{var1}}</b> <br/>
+    <b>var2= {{var2}}</b> <br/>
+    <b>somma= {{var1+var2}}</b> <br/>
+    {% if var1<var2 %}
+    <div id="myDIV">
+        promt(var1)
+    </div>
+    <div id="myDIV2">
+        promt(var2)
+    </div>
+    {% elif var1>var2 %}
+    <div id="myDIV">
+        promt(var2)
+    </div>
+    <div id="myDIV2">
+        promt(var1)
+    </div>
+    {% else %}
+    <div id="myDIV3">
+        promt(var1,var2,somma)
+    </div>
+    </div>
+</body>
+</html>
