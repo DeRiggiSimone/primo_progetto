@@ -1,10 +1,9 @@
-from django.contrib import admin
 from django.urls import path
-from news.views import path
+from .views import home, articoloDetailView
 
 app_name='news'
 
 urlpattern = [
-    path('admin/',admin.site.urls),
-    path("", home, name="homeview")
+    path("", home, name="homeview"),
+    path("articoli/<int:pk>",articoloDetailView , name="articolo_detail")
 ]

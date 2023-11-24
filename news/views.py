@@ -16,16 +16,26 @@ from .models import Articolo, Giornalista
 
   #  return HttpResponse("<h1>"+ response +"</h1>")
 
+#def home(request):
+ #   a=[]
+  #  g=[]
+   # for art in Articolo.objects.all():
+    #    a.append(art.Articolo)
+
+    #for gio in Giornalista.objects.all():
+     #   g.append(gio.nome)
+
+    #response= str<a>+ "<br>"+ str(g)
+    #print(response)
+
+    #return HttpResponse("<h1>"+ response +"</h1>")
 def home(request):
-    a=[]
-    g=[]
-    for art in Articolo.objects.all():
-        a.append(art.Articolo)
-
-    for gio in Giornalista.objects.all():
-        g.append(gio.nome)
-
-    response= str<a>+ "<br>"+ str(g)
-    print(response)
-
-    return HttpResponse("<h1>"+ response +"</h1>")
+    articoli= Articolo.objects.all()
+    giornalisti=Giornalista.object.all()
+    context={"articoli": articoli, "giornalisti": giornalisti}
+    print(context)
+    return render(request, "homepage.html", context)
+def articoloDetailView(request, pk):
+    articolo= get_onject_or_404(Articolo, pk=pk)
+    context= {"articolo": articolo}
+    return render(request, "articolo_detail.html", context)
