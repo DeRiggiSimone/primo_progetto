@@ -10,7 +10,7 @@ def es_if(request):
     }
     return render(request, "es_if.html", context)
 
-def if_else_elif(request):
+def es_if_else_elif(request):
     context ={
         'var1' : 100,
         'var2' : 100.0,
