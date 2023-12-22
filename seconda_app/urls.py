@@ -1,5 +1,5 @@
 from django.urls import path
-from seconda_app.views import es_if,es_if_else_elif,es_for
+from seconda_app.views import es_if,es_for,es_if_else_elif
 
 app_name="seconda_app"
 urlpatterns=[
