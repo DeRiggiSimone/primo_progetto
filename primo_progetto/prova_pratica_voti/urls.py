@@ -1,5 +1,6 @@
 from django.urls import path
-from seconda_app.views import voti_a,voti_b,voti_c,voti_d
+from .views import voti_a,voti_b,voti_c,voti_d
+
 
 app_name="seconda_app"
 urlpatterns=[

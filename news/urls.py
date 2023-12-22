@@ -3,8 +3,8 @@ from .views import home, articoloDetailView,listaArticoli
 
 app_name='news'
 
-urlpattern = [
+urlpatterns = [
     path("", home, name="homeview"),
     path("articoli/<int:pk>",articoloDetailView , name="articolo_detail"),
-    path("", listaArticoli, name="lista_articoli_giornalista")
+    path("", listaArticoli, name="lista_articoli_giornalista"),
 ]
