@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>{% block title %}{{block.super}}  | Index {% endblock title %}</title>
 </head>
 <body>
+    {%block content%}
     <ol>
         <li><a href="/">Root</a></li>
         <li><a href="{% url 'prima_app:homepage'%}">home page benvenuto</a></li>
@@ -17,5 +19,6 @@
 
 
     </ol>
+    {%endblock content%}
 </body>
 </html>
